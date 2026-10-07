@@ -112,7 +112,7 @@ flowchart TD
 ## 📂 Repository Structure
 
 ```
-ultramuscle-ai/
+UltraMuscleAI/
 ├── app/
 │   ├── app.py                     # Interactive Streamlit Clinical Dashboard
 │   ├── components/                # UI widgets & video player
@@ -163,8 +163,8 @@ ultramuscle-ai/
 
 ### 1. Clone the Repository & Set Up Environment
 ```bash
-git clone https://github.com/your-username/ultramuscle-ai.git
-cd ultramuscle-ai
+git clone https://github.com/your-username/UltraMuscleAI.git
+cd UltraMuscleAI
 
 # Create virtual environment
 python -m venv venv
@@ -291,7 +291,7 @@ If you find this repository or methodology useful in your research or project, p
   author = {Your Name / Team},
   title = {UltraMuscleAI: Physics-Informed Deep Metrology for Skeletal Muscle Architecture in B-Mode Ultrasound},
   year = {2026},
-  url = {https://github.com/your-username/ultramuscle-ai}
+  url = {https://github.com/your-username/UltraMuscleAI}
 }
 
 @article{umud_challenge_2026,
