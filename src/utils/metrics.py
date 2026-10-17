@@ -17,6 +17,24 @@ DEFAULT_TOLERANCES: Dict[str, float] = {
     "mt_mm": 2.0,   # Millimeters
 }
 
+# Official Kaggle Competition Dynamic Range Normalization
+LEADERBOARD_RANGES: Dict[str, float] = {
+    "pa_deg": 40.0,   # Test range: 5.0 to 45.0 degrees
+    "fl_mm": 170.0,   # Test range: 30.0 to 200.0 mm
+    "mt_mm": 40.0,    # Test range: 10.0 to 50.0 mm
+}
+
+
+def compute_leaderboard_score(
+    y_true: Union[np.ndarray, torch.Tensor],
+    y_pred: Union[np.ndarray, torch.Tensor],
+) -> Dict[str, float]:
+    """
+    Computes the official Kaggle Leaderboard Normalized Score:
+        Score = (1/3) * ( MAE_PA / 40.0 + MAE_FL / 170.0 + MAE_MT / 40.0 )
+    """
+    return compute_umud_score(y_true, y_pred, tolerances=LEADERBOARD_RANGES)
+
 
 def compute_umud_score(
     y_true: Union[np.ndarray, torch.Tensor],
